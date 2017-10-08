@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Data Types</title>
+</head>
+<body>
+
+	<p>Check Data Value</p>
+	
+	<p id="demo"></p>
+	
+	<br>
+	
+	<p>Check Data Type</p>
+	<p id="demo2"></p>
+	
+	<script>
+	
+	
+	 var x;               				// x is undefined
+	 var y = 5;                         // y is a Number
+	 var z = "This String Value";       // z is a String 
+	
+	 
+	 alert("This is x = "+ x + " This is y = " + y +" This is z = " + z );
+	 
+	 
+	 
+			 var arrayValues = ["value1","value2","value3"];
+
+	 document.getElementById("demo").innerHTML = arrayValues[0] + "<br>" + z;
+	 
+ 
+	 
+	
+	document.getElementById("demo2").innerHTML = 
+		typeof "john" + "<br>" + 
+		typeof 3.14 + "<br>" +
+		typeof true + "<br>" +
+		typeof false;
+	
+	
+	
+	
+	
+	</script>
+</body>
+</html>

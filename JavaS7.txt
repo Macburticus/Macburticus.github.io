@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>JavaScript Operators</title>
+	<script>
+		var a = 2; 
+		var b = 8;
+		
+		a+=b;
+		console.log(a);
+		
+		a = 2;
+		a-=b;
+		console.log(a);
+		
+		a = 2;
+		a*=b;
+		console.log(a);
+		
+		a = 2;
+		a/=b;
+		console.log(a);
+		
+		a = 2;
+		b %= a;
+		console.log(b); 
+		
+		a = 0;
+		b = 0;
+		b %= a;
+		console.log(b);
+		
+		
+	</script>
+</head>
+<body>
+	<p>Please open the Developer's Console to see the output of the script.</p>
+</body>
+</html>

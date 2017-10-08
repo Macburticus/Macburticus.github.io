@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>JavaScript Operators</title>
+	<script>
+		var a = 2; 
+		var b = 6;
+		
+		console.log(a + b);
+		
+		console.log(a - b);
+		
+		console.log(a * b);
+		
+		console.log(a / b);
+		
+		console.log(b % a); 
+		
+		console.log(++a); 
+		
+		console.log(--a); 
+		
+		console.log(a + "String Value"); 
+		
+		console.log(a * "String Value2");
+	</script>
+</head>
+<body>
+	<p>Please open the Developer's Console to see the output of the script.</p>
+</body>
+</html>

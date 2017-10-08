@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>JavaScript</title>
+</head>
+<body>
+	<p>JavaScript page</p>
+	
+	
+			<p><b>declaration</b></p>		
+	
+	<p id="demo"></p>
+	
+	
+	
+		<p><b>assignment</b></p>
+	
+	<p id="demo2"></p>
+	
+	
+		
+			<p><b>reassignment</b></p>		
+	
+	<p id="demo3"></p>
+	
+	
+		<p><b>copying</b></p>		
+	
+	<p id="demo4"></p>
+	
+	
+	
+
+	
+	
+	
+	<script >
+	
+	
+	
+	//declaration
+	var num1;
+
+	var name1;
+
+	var $firstName;
+
+	var _carSpecs;
+
+
+	var arr123;
+	
+	document.getElementById("demo").innerHTML = "name1= " + name1 + "<br> arr123= " + arr123;
+	
+	
+	
+	
+	
+	
+	//assignment
+	
+	var num;
+	num = 3;
+
+	var name;
+	name = 'Adam';
+
+	var firstName = "Jennifer";
+
+	var carSpecs = {
+		numWheels: 4,
+		engine: 'V6',
+		interior: 'cloth'
+	};
+
+	var arr1 = [1, 2, 3, 4];
+
+
+	document.getElementById("demo2").innerHTML = "num= " + num + "<br> name= " + name + "<br> firstName= " + firstName + "<br> carSpecs= " + carSpecs.numWheels + "<br> arr1= " + arr1;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//reassignment
+	
+	var num2;
+	num2 = 3;
+
+	num2 = 5;
+
+	num2 = "Mark";
+	
+	
+	
+	
+	document.getElementById("demo3").innerHTML = "num2= " + num2;
+	
+	
+	
+	
+	
+	
+	
+
+	
+	//copying
+	
+	var a = 23;
+
+	var b = a;	//a and b have the same value
+
+	a = 25;
+	
+	document.getElementById("demo4").innerHTML = "a= " + a + "<br> b= " + b;
+	
+	
+	
+	
+
+	
+	
+	
+	//lifecycle
+		var b;
+	console.log(b);  //b is undefined
+
+	b = 23; //b is now 23
+	console.log(b);
+
+	b = "Adam"; //b is now Adam
+	console.log(b);
+
+	b = null;  //b is now null
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>

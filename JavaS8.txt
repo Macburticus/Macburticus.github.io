@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>JavaScript Conditional Statements</title>
+	<script>
+		var a = 5;
+		if (a < 6){
+			console.log("The number is less than 6");
+		}
+		
+		
+		var a = 5;
+		if (a == 5){
+			console.log("The number is equal to 5");
+		}
+		
+		var a = 5;
+		if (a != 7){
+			console.log("The number is not equal to 7");
+		}
+		
+		var a = 5;
+		if (a <= 9){
+			console.log("The number is less than or equal to 9");
+		}
+		
+		var a = "5";
+		if (a == 5){
+			console.log("The number is equal to 5");
+		}
+		
+		var a = "5";
+		if (a !== 5){
+			console.log("The number is not the string '5' ");
+		}
+		
+		
+	</script>
+</head>
+<body>
+	<p>Please open the Developer's Console to see the output of the script.</p>
+</body>
+</html>

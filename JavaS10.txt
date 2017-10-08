@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>JavaScript Conditional Statements</title>
+	<script>
+		var a = 4;
+		var b = a % 2;
+		if (a > 4){
+			console.log("The number is greater than 4");
+		}else if (a % 2 == 0){
+			alert("else/if has run! " + b);
+		} 
+		else {
+			console.log("The opposite case ran " + b);
+		}
+	</script>
+</head>
+<body>
+	<p>Please open the Developer's Console to see the output of the script.</p>
+</body>
+</html>
+
