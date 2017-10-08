@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1" name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<style type="text/css">
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: black;
+}
+
+</style>
+
+
+</head>
+<body>
+
+
+ <table id="t01" style="width:100%">
+  <caption>Customer Table</caption>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>name1</td>
+    <td>name2</td>
+    <td>number1</td>
+  </tr>
+  <tr>
+    <td>name3</td>
+    <td>name4</td>
+    <td>number2</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+   <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table> 
+
+
+
+
+<h2>Unordered List with Square Bullets</h2>
+
+<ul style="list-style-type:square">
+  <li>text 1</li>
+  <li>text 2</li>
+  <li>text 3</li>
+</ul>
+
+
+<h2>Ordered List with Numbers</h2>
+
+<ol type="1">
+  <li>text 1</li>
+  <li>text 2</li>
+  <li>text 3</li>
+</ol>  
+
+
+
+<h2>Ordered List with Letters</h2>
+
+<ol type="A">
+  <li>text 1</li>
+  <li>text 2</li>
+  <li>text 3</li>
+</ol>  
+
+<h2>A Description List</h2>
+
+<dl>
+  <dt>text 1</dt>
+  <dd>- about text one</dd>
+  <dt>text 2</dt>
+  <dd>- about text two</dd>
+</dl>
+
+
+
+ <div style="background-color:black;color:white;padding:20px;">
+  <h2>heading</h2>
+  <p>Text about the heading located here.</p>
+</div> 
+
+
+<h1>My <span style="color:red">Important</span> Heading</h1>
+
+
+
+ <form action="/action_page.html">
+  First name:<br>
+  <input type="text" name="firstname" value="First Name"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Last Name"><br><br>
+
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+
+  
+  <br>
+  
+    <input type="checkbox" name="vehicle1" value="ValidDriver">I have a valid driver's license<br>
+  <input type="checkbox" name="vehicle2" value="ValidWorker"> I can work in the U.S.A.
+  
+  <br>
+  
+    Select your favorite color:
+  <input type="color" name="favcolor">
+  <br>
+
+    Birthday:
+  <input type="date" name="bday">
+  <br>
+    E-mail:
+  <input type="email" name="email">
+  <br>
+  
+  
+    Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5">
+  
+  <br>
+  
+  <input type="range" name="points" min="0" max="10">
+  <br>
+  
+  
+    
+  <input type="submit" value="Submit">
+  
+  <br>
+</form> 
+
+
+</body>
+</html>
