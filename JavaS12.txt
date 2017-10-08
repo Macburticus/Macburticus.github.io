@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<head>
+	<title>JavaScript Data Types</title>
+</head>
+<body>
+
+	<p>Check Data Value</p>
+	
+	<p id="demo"></p>
+	
+	<br>
+	
+	<p>Check Data Type</p>
+	<p id="demo2"></p>
+	
+	<script>
+	
+
+	
+	 
+	 
+	 
+	 
+	 
+	 for (var i = 1; i <= 3; i++) {
+		 console.log ("For loop 1 executed");
+		 document.getElementById("demo").innerHTML = i + "<br>";
+		 alert("This is i = " + i );
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 for (var i = 1; i <= 5; i++) {
+		 console.log("For loop 2 executed " + i + " times");
+		 
+	 
+	 	}
+		
+	 document.getElementById("demo2").innerHTML = "i:" + i + "<br>";
+		 console.log ("i:" + i);
+	 
+	 
+
+	
+		 
+		 var i = 0;
+		 while (i<10){
+		 console.log("While loop 1 executed " + i + " times");
+		 i++;
+		 }
+		 
+	
+		 
+		 var i = 0;
+		 while (i<10){
+		 console.log("While loop 2 executed " + i + " times");
+		 i++;
+
+		 if (i==5){
+		 break;
+		 }
+
+
+		 }
+		 
+		 
+		 
+		 
+		 var i = 0;
+		 while (i<10){
+
+		 if (i==5){
+			 i++
+			continue;
+		 }
+
+		 console.log("While loop 3 executed " + i + " times");
+		 i++
+		 }
+	
+	
+	</script>
+</body>
+</html>

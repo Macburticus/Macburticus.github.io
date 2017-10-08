@@ -1,0 +1,127 @@
+using Amazon;
+using Amazon.EC2;
+using Amazon.EC2.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace AwsSdkStatusCheck
+{
+    public class StatusCheckClass
+    {
+
+
+
+        public String InstantceStateName(String instanceId7)
+        {
+            try
+            {
+                var instanceId2 = instanceId7;
+
+
+                var ec2Client2 = new AmazonEC2Client(RegionEndpoint.USEast1);
+
+
+                var statusResponse2 = new DescribeInstanceStatusResponse();
+                //var statusResult = new DescribeInstanceStatusResult;
+
+                //var statusResult  DescribeInstanceStatusResult;
+                var statusRequest2 = new DescribeInstanceStatusRequest
+                {
+                    InstanceIds = { instanceId2 }
+                };
+
+                var status2 = ec2Client2.DescribeInstanceStatus(statusRequest2).InstanceStatuses[0];
+
+
+                //var result = ec2Client.DescribeInstanceStatus.statusRequest;
+
+
+                String InstanceVar = status2.InstanceState.Name;
+
+
+
+                return InstanceVar;
+
+
+            }
+            catch
+            {
+
+                String InstanceVar = "N/A";
+
+                return InstanceVar;
+
+            }
+
+        }
+
+
+
+
+
+
+        public String[] StatusCheckDetails(String instanceId7)
+        {
+            try
+            {
+                var instanceId2 = instanceId7;
+
+
+                var ec2Client2 = new AmazonEC2Client(RegionEndpoint.USEast1);
+
+
+                var statusResponse2 = new DescribeInstanceStatusResponse();
+                //var statusResult = new DescribeInstanceStatusResult;
+
+                //var statusResult  DescribeInstanceStatusResult;
+                var statusRequest2 = new DescribeInstanceStatusRequest
+                {
+                    InstanceIds = { instanceId2 }
+                };
+
+                var status2 = ec2Client2.DescribeInstanceStatus(statusRequest2).InstanceStatuses[0];
+
+
+                //var result = ec2Client.DescribeInstanceStatus.statusRequest;
+
+
+                String StatusInstanceId = status2.InstanceId;
+                String StatusInstanceStateName = status2.InstanceState.Name;
+                String StatusDetailName = status2.Status.Details[0].Name;
+                String StatusDetailStatus = status2.Status.Details[0].Status;
+                String StatusValue = status2.Status.Status.Value;
+                String SystemStatusDetalsName = status2.SystemStatus.Details[0].Name;
+                String SystemStatusDetailStatus = status2.SystemStatus.Details[0].Status;
+                String StatusAvailabilityZone = status2.AvailabilityZone;
+
+                String[] InstanceVars = new string[] { StatusInstanceId, StatusInstanceStateName, StatusDetailName, StatusDetailStatus, StatusValue, SystemStatusDetalsName, SystemStatusDetailStatus, StatusAvailabilityZone };
+
+
+                return InstanceVars;
+
+            }
+            catch
+            {
+
+                String[] InstanceVars = new string[] { "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A" };
+
+                return InstanceVars;
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    }
+}

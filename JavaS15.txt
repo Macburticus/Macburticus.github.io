@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<head>
+	<title>JavaScript function with parameters</title>
+	<script>
+		function returner(p1){
+			return p1 + 7;
+		}
+		
+		var result = returner(8);
+		console.log(result);
+	</script>
+</head>
+<body>
+</body>
+</html>

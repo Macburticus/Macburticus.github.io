@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript DOM Manipulation</title>
+</head>
+<body>
+	<p id="myId" >This is a paragraph</p>
+	
+	<script>
+		var para = document.getElementById("myId");
+		console.log(para);
+		
+		para.innerHTML = "New text is being displayed!";
+		para.style.color = "red";
+		
+	</script>
+</body>
+</html>

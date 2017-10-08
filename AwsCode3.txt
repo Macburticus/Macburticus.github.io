@@ -1,0 +1,56 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StatusCheckPage.aspx.cs" Inherits="AwsSdkStatusCheck.StatusCheckPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+                <asp:Table ID="Table1" 
+            runat="server" 
+            Font-Size="X-Large" 
+            Width="760px" 
+            Font-Names="Palatino"
+            BackColor="#E1ECF9"
+            BorderColor="#091D34"
+            BorderWidth="2"
+            ForeColor="#000000"
+            CellPadding="5"
+            CellSpacing="5" 
+            class="table table-bordered"
+            >
+            <asp:TableHeaderRow 
+                runat="server" 
+                ForeColor="#E1ECF9"
+                BackColor="#3A88A6"
+                Font-Bold="true"
+                Height="25px"
+                >
+                <asp:TableHeaderCell>Instance ID</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Instance State</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Instance Name</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Instance Status</asp:TableHeaderCell>
+                <asp:TableHeaderCell>System State</asp:TableHeaderCell>
+                <asp:TableHeaderCell>System Name</asp:TableHeaderCell>
+                <asp:TableHeaderCell>System Status</asp:TableHeaderCell>
+                <asp:TableHeaderCell>Avaiabilty Zone</asp:TableHeaderCell>
+            </asp:TableHeaderRow>
+           
+        </asp:Table>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+    
+    </div>
+    </form>
+</body>
+</html>

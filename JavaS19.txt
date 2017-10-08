@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript DOM Manipulation</title>
+</head>
+<body>
+	<p id="myId">This is a paragraph</p>
+	
+	<h4>This is h4 1</h4>
+	<h4>This is h4 2</h4>
+	<h4>This is h4 3</h4>
+	
+	<span class="one">Span 1</span>
+	<span class="one">Span 2</span>
+	
+	
+	<script>
+		var elem = document.getElementById("myId");
+		console.log(elem);
+		
+		var h4Array = document.getElementsByTagName("h4");
+		console.log(h4Array);
+		for (i = 0; i < h4Array.length; i++){
+			console.log(h4Array[i]);
+		}
+		
+		var spanArray = document.getElementsByClassName("one");
+		console.log(spanArray);
+		for (i = 0; i < spanArray.length; i++){
+			console.log(spanArray[i]);
+		}
+		
+	</script>
+</body>
+</html>

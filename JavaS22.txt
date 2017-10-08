@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Events</title>
+</head>
+<body>
+	<form id="myForm">
+		<select id="theSelector">
+			<option value="" disabled selected>Choose a value</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+		</select>
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<script>
+		var selector = document.getElementById("theSelector");
+		
+		selector.addEventListener("change", function(){
+			alert("The option was changed: " + selector.value);
+		});
+		
+		var form = document.getElementById("myForm");
+		form.addEventListener("submit", function(){
+			alert("form was submitted!");
+			console.log("The form has been submitted!");
+		});
+		
+	</script>
+</body>
+</html>

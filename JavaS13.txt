@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<head>
+	<title>JavaScript function</title>
+	<script>
+		function talk(){
+			alert("Hello!");
+		}
+		
+		talk();
+	</script>
+</head>
+<body>
+</body>
+</html>
