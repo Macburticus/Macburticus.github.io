@@ -26,6 +26,14 @@
       padding: 50px 25px;
       font-family: Montserrat, sans-serif;
   }
+  
+    .jumbotron2 {
+      background-color: #ffffff;
+      color: #fff;
+      padding: 50px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  
   .container-fluid {
       padding: 60px 50px;
   }
