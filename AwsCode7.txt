@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace AwsCLI
+{
+    public class AwsCommandClass
+    {
+
+
+        public String[] GetIdNumbers()
+        {
+            try
+            {
+
+                string cmd = @"/c aws ec2 describe-instances --query ""Reservations[*].Instances[*].[InstanceId]"" --output text""";
+
+                //Get Istance Name and other info
+                //string cmd2 = @"/c aws ec2 describe-instances --query ""Reservations[].Instances[].Tags[?Key==`Name`].Value"" --output text""";
+                // string cmd2 = @"/c aws ec2 describe-instances --query ""Reservations[*].Instances[*].[InstanceId, PublicIpAddress, Placement.AvailabilityZone, InstanceType, State.Name]"" --output text""";
+
+                //Start and Stop Instances
+                //string cmd2 = @"/c aws ec2 stop-instances --instance-ids "+ InstanceId + "";
+                //string cmd2 = @"/c aws ec2 start-instances --instance-ids " + InstanceId + "";
+
+                //Change Instance Type
+                //String cmdOne = @"/c aws ec2 modify-instance-attribute --instance-id  " + InstanceId + "";
+                //String cmdTwo = @"  --instance-type ""{\""Value\"": \""" + InstanceType + "";
+                //String cmdThree = @"\""}""";
+                //string cmd2 = cmdOne + cmdTwo + cmdThree;
+
+
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                proc.StartInfo.FileName = "cmd.exe";
+                proc.StartInfo.Arguments = cmd;
+                proc.StartInfo.UseShellExecute = false;
+                proc.StartInfo.RedirectStandardOutput = true;
+                proc.Start();
+                string output = proc.StandardOutput.ReadToEnd();
+
+
+                string[] sep = new string[] { "\r\n" };
+                string[] InstanceVars = output.Split(sep, StringSplitOptions.RemoveEmptyEntries);
+
+
+                return InstanceVars;
+
+            }
+            catch
+            {
+
+                String[] InstanceVars = new string[] { "N/A" };
+
+                return InstanceVars;
+
+            }
+
+        }
+
+
+
+
+
+    }
+}
