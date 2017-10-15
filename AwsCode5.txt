@@ -1,0 +1,116 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace AwsCloudWatch
+{
+    public partial class CloudWatchView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button20_Click(object sender, EventArgs e)
+        {
+
+
+            String MetricName6 = "CPUUtilization";
+           // String MetricName9 = "NetworkIn";
+           // String MetricName10 = "DiskReadBytes";
+           // String MetricName11 = "NetworkPacketsOut";
+           // String MetricName12 = "StatusCheckFailed_Instance";
+
+            double Period6 = 1;
+            double StartTime6 = 30;
+            String Statistics6 = "Minimum";
+            String Statistics7 = "Maximum";
+            String Statistics8 = "Average";
+
+
+            String[] lines = { "i-00ad0c2bb6c2b1296", "i-099adc72920d1600e" };
+
+            int a = lines.Length;
+
+
+            // Total number of rows.
+            int rowCnt;
+            // Current row count.
+            int rowCtr;
+            // Total number of cells per row (columns).
+            //     int cellCtr;
+            // Current cell counter
+            //       int cellCnt;
+
+            rowCnt = a;
+            //    cellCnt = 8;
+
+            for (rowCtr = 1; rowCtr <= rowCnt; rowCtr++)
+            {
+                // Create new row and add it to the table.
+                TableRow tRow = new TableRow();
+                Table2.Rows.Add(tRow);
+                //    for (cellCtr = 1; cellCtr <= cellCnt; cellCtr++)
+                //   {
+
+
+
+                //CPU Min
+                var retVal = new CloudWatchClass().GetMethicsDataPercent(lines[rowCtr - 1], MetricName6, Period6, StartTime6, Statistics6);
+
+                //CPU Max
+                var retVal2 = new CloudWatchClass().GetMethicsDataPercent(lines[rowCtr - 1], MetricName6, Period6, StartTime6, Statistics7);
+
+                //CPU Average
+                var retVal3 = new CloudWatchClass().GetMethicsDataPercent(lines[rowCtr - 1], MetricName6, Period6, StartTime6, Statistics8);
+
+
+                String IdNum = lines[rowCtr - 1];
+
+                String retVal21 = retVal.ToString();
+
+                String retVal22 = retVal2.ToString();
+
+                String retVal23 = retVal3.ToString();
+
+  
+
+
+                // Create a new cell and add it to the row.
+                TableCell tCell0 = new TableCell();
+                tCell0.Text = IdNum;
+                tRow.Cells.Add(tCell0);
+
+
+
+                // Create a new cell and add it to the row.
+                TableCell tCell = new TableCell();
+                tCell.Text = retVal21;
+                tRow.Cells.Add(tCell);
+
+
+                // Create a new cell and add it to the row.
+                TableCell tCell2 = new TableCell();
+                tCell2.Text = retVal22;
+                tRow.Cells.Add(tCell2);
+
+
+                // Create a new cell and add it to the row.
+                TableCell tCell3 = new TableCell();
+                tCell3.Text = retVal23;
+                tRow.Cells.Add(tCell3);
+
+
+
+            }
+
+
+
+
+
+        }
+    }
+}

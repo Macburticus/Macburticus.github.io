@@ -1,0 +1,79 @@
+using Amazon;
+using Amazon.CloudWatch;
+using Amazon.CloudWatch.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace AwsCloudWatch
+{
+    public class CloudWatchClass
+    {
+
+
+
+        public double GetMethicsDataPercent(String instanceId7, String MetricName7, double Period7, double StartTime7, String Statistics7)
+        {
+
+            try
+            {
+
+                var instanceId = instanceId7;
+                var client = new AmazonCloudWatchClient(RegionEndpoint.USEast1);
+                var dimension = new Dimension
+               
+                {
+                    Name = "InstanceId",
+                    Value = instanceId
+                };
+
+                var request = new GetMetricStatisticsRequest
+                {
+                    Dimensions = new List<Dimension>() { dimension },
+                    EndTime = DateTime.Today,
+                    MetricName = MetricName7,
+                    Namespace = "AWS/EC2",
+                    // Get statistics by day.
+                    Period = (int)TimeSpan.FromDays(Period7).TotalSeconds,
+                    // Get statistics for the past month.
+                    StartTime = DateTime.Today.Subtract(TimeSpan.FromDays(StartTime7)),
+                    Statistics = new List<string>() { Statistics7 },
+                    Unit = StandardUnit.Percent
+
+                    // Unit = StandardUnit.Bytes
+                    // Unit = StandardUnit.Count
+                   
+
+                };
+
+                var response = client.GetMetricStatistics(request);
+
+                if (response.Datapoints.Count > 0)
+                {
+                    foreach (var point in response.Datapoints)
+                    {
+                        
+                        return point.Maximum;
+                        //return point.Minimum;
+                        //return point.Average;
+                        //return point.Timestamp;
+                    }
+                }
+                else
+                {
+                    return 0.0;
+                }
+                return 0.0;
+            }
+            catch
+            {
+                return 0.0;
+            }
+        }
+
+
+    }
+}
+
+
