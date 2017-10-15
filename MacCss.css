@@ -212,18 +212,19 @@
   
   
   .responsive-video {
-    position: center;
+    position: relative;
     padding-bottom: 56.25%;
     padding-top: 60px; overflow: hidden;
+    margin-left: 15%;
 }
 
 .responsive-video iframe,
 .responsive-video object,
 .responsive-video embed {
-    position: center;
+    position: absolute;
     top: 0;
     left: 0;
     width: 80%;
-    height: 80%;
+    height: 65%;
 }
   
